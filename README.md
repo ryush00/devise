@@ -8,8 +8,7 @@ By [Plataformatec](http://plataformatec.com.br/).
 
 This README is [also available in a friendly navigable format](http://devise.plataformatec.com.br/).
 
-Devise is a flexible authentication solution for Rails based on Warden. It:
-
+Devise는 융통성 있는 Warden을 기반으로 한 Rails용 인증 솔루션입니다. 이것은:
 * Is Rack based;
 * Is a complete MVC solution based on Rails engines;
 * Allows you to have multiple models signed in at the same time;
@@ -89,23 +88,22 @@ If you are building your first Rails application, we recommend you *do not* use 
 
 Once you have solidified your understanding of Rails and authentication mechanisms, we assure you Devise will be very pleasant to work with. :smiley:
 
-## Getting started
+## 시작하기
 
-Devise 3.0 works with Rails 3.2 onwards. You can add it to your Gemfile with:
-
+Devise 3.0은 Rails 3.2부터 작동합니다. Gemfile에 아래와 같이 추가할 수 있습니다:
 ```ruby
 gem 'devise'
 ```
 
-Run the bundle command to install it.
+bundle 명령어를 실행하여 설치할 수 있습니다.
 
-After you install Devise and add it to your Gemfile, you need to run the generator:
+Devise를 설치한 후, generator를 실행해야 합니다:
 
 ```console
 rails generate devise:install
 ```
 
-The generator will install an initializer which describes ALL of Devise's configuration options. It is *imperative* that you take a look at it. When you are done, you are ready to add Devise to any of your models using the generator:
+generator devise의 모든 설정 옵션을 묘사한 초기값을 설치합니다. 이것은 이것을 보기 위해 "필수적으로" 해야합니다. 모두 완료하였으면, generator를 이용하여 당신의 모델에 추가할 준비가 되었습니다.
 
 ```console
 rails generate devise MODEL
