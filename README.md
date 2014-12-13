@@ -109,17 +109,17 @@ generator devise의 모든 설정 옵션을 묘사한 초기값을 설치합니�
 rails generate devise MODEL
 ```
 
-Replace MODEL with the class name used for the application’s users (it’s frequently `User` but could also be `Admin`). This will create a model (if one does not exist) and configure it with default Devise modules. The generator also configures your `config/routes.rb` file to point to the Devise controller.
+MODEL을 애플리케이션의 유저를 위해 사용될 클래스 이름으로 대체하세요(종종 `User`로 사용되기도 하지만 `Admin`으로 사용되기도 합니다). 이것은 모델을 설치하고 (존재하지 않을 경우) 기본값으로 Devise 모듈을 설정할 것입니다. generator는 또한 `config/routes.rb`를 수정하여 Devise 컨트롤러로 가도록 합니다.
 
-Next, check the MODEL for any additional configuration options you might want to add, such as confirmable or lockable. If you add an option, be sure to inspect the migration file (created by the generator if your ORM supports them) and uncomment the appropriate section.  For example, if you add the confirmable option in the model, you'll need to uncomment the Confirmable section in the migration. Then run `rake db:migrate`
+다음으로, MODEL을 위해서 설정하기를 원하신다면 confirmable나 lockable등으로 설정하세요. If you add an option, be sure to inspect the migration file (created by the generator if your ORM supports them) and uncomment the appropriate section.  For example, if you add the confirmable option in the model, you'll need to uncomment the Confirmable section in the migration. Then run `rake db:migrate`
 
-Next, you need to set up the default URL options for the Devise mailer in each environment. Here is a possible configuration for `config/environments/development.rb`:
+다음으로, 기본 URL 옵션을 Devise 메일러를 위해 각각의 실행 환경에게 설정해 주어야 합니다. 다음과 같이 `config/environments/development.rb`에 설정하는것도 가능합니다. :
 
 ```ruby
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-You should restart your application after changing Devise's configuration options. Otherwise, you will run into strange errors, for example, users being unable to login and route helpers being undefined.
+Devise의 설정 옵션을 변경한 후에는 애플리케이션을 재시작해야 합니다. 그렇지 않으면, 로그인이 불가능하는 등의 이상한 문제가 발생할 수도 있습니다.
 
 ### Controller filters and helpers
 
